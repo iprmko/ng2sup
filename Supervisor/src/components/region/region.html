@@ -1,0 +1,28 @@
+<ion-card>
+  <ion-card-header *ngIf="item && item.header">
+    <h2>{{item.header}}</h2>
+    <ion-label *ngIf="errorMessage" color="danger" padding>{{errorMessage}}</ion-label>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <ion-spinner *ngIf="variables===null" name="crescent"></ion-spinner>
+    <ion-list *ngIf="variables!==null">
+      <tag [ngModel]="variable" *ngFor="let variable of variables" (valueUpdate)="variableChange(variable)"></tag>
+    </ion-list>
+
+    <ion-spinner *ngIf="actions===null" name="crescent"></ion-spinner>
+    <ion-list *ngIf="actions!==null">
+      <action [ngModel]="action" *ngFor="let action of actions" (actionRequest)="doAction(action)"></action>
+    </ion-list>
+
+    <ion-spinner *ngIf="pages===null" name="crescent"></ion-spinner>
+    <ion-list *ngIf="pages!==null">
+      <button ion-item *ngFor="let page of pages" (click)="navigate(page)">
+          {{page.title}}
+    </button>
+    </ion-list>
+
+  </ion-card-content>
+
+</ion-card>

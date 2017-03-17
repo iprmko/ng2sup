@@ -1,0 +1,43 @@
+<!-- {{item | json}} -->
+
+<ion-item (click)="onTouchedCallback()" *ngIf="isStringVariable">
+  <ion-icon [name]="icon" item-left></ion-icon>
+  <ion-label placeholder="Unamed">{{item.name}}:</ion-label>
+  <ion-input (focus)="onUserEnter()" (blur)="onUserExit()" [readonly]="readonly" [disabled]="disabled" [type]="representation" [(ngModel)]="value" [max]="max" [min]="min" [step]="step" placeholder="Undefined"></ion-input>
+  <div item-right>
+    <ion-label class="small">{{item.unit}}</ion-label>
+  </div>
+</ion-item>
+
+<ion-item (click)="onTouchedCallback()" *ngIf="isNumberVariable">
+  <ion-icon [name]="icon" item-left></ion-icon>
+  <ion-label placeholder="Unamed">{{item.name}}:</ion-label>
+  <ion-input (focus)="onUserEnter()" (blur)="onUserExit()" [readonly]="readonly" [disabled]="disabled" type="number" [(ngModel)]="value" [max]="max" [min]="min" [step]="step"></ion-input>
+  <div item-right>
+    <ion-label class="small">{{item.unit}}</ion-label>
+  </div>
+</ion-item>
+
+
+<ion-item (click)="onTouchedCallback()" *ngIf="isBinaryVariable">
+  <ion-icon [name]="icon" item-left></ion-icon>
+  <ion-label placeholder="Unamed">{{item.name}}:</ion-label>
+  <ion-toggle (focus)="onUserEnter()" (blur)="onUserExit()" *ngIf="!readonly" [disabled]="disabled" [checked]="valueIsTrue"></ion-toggle>
+  <ion-icon item-right *ngIf="readonly && valueIsTrue" name="radio-button-on"></ion-icon>
+  <ion-icon item-right *ngIf="readonly && valueIsFalse" name="radio-button-off"></ion-icon>
+  <ion-icon item-right *ngIf="readonly && valueIsUndefined" name="disc"></ion-icon>
+</ion-item>
+
+<ion-item (click)="onTouchedCallback()" *ngIf="isEnumVariable">
+  <ion-icon [name]="icon" item-left></ion-icon>
+  <ion-label placeholder="Unamed">{{item.name}}:</ion-label>
+  <ion-select (focus)="onUserEnter()" (blur)="onUserExit()" *ngIf="!readonly" [(ngModel)]="value" multiple="false">
+    <ion-option *ngFor="let opt of item.enumeration" [value]="opt" [disabled]="disabled">{{opt}}</ion-option>
+  </ion-select>
+  <ion-input (focus)="onUserEnter()" (blur)="onUserExit()" *ngIf="readonly" [readonly]="true" [disabled]="disabled" type="text" [(ngModel)]="value"></ion-input>
+  <div item-right>
+    <ion-label class="small">{{item.unit}}</ion-label>
+  </div>
+</ion-item>
+
+<ion-label *ngIf="errorMessage" color="danger">{{errorMessage}}</ion-label>

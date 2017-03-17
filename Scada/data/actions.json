@@ -1,0 +1,19 @@
+[{
+  "name": "Action1",
+  "header": "The Action1",
+  "variables": [
+    "Lunghezza",
+    "Peso",
+    "Nome",
+    "Display"
+  ]
+}, {
+  "name": "Action2",
+  "header": "The Action2",
+  "variables": [
+    "Led1",
+    "Led2",
+    "Acceso",
+    "Mesi"
+  ]
+}]

@@ -1,0 +1,30 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>SCADA</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openScadaPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons start>
+        <button ion-button icon-left *ngIf="loggedIn" (click)="editSettings()">
+           Settings
+           <ion-icon name="cog"></ion-icon>
+         </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

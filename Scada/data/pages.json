@@ -1,0 +1,48 @@
+[{
+  "title": "Page1",
+  "root": true,
+  "actions": [
+    "Action1",
+    "Action2"
+  ],
+  "regions": [{
+    "header": "Region1",
+    "variables": [
+      "Lunghezza",
+      "Peso",
+      "Nome",
+      "Display",
+      "Led1",
+      "Led2",
+      "Acceso",
+      "Mesi"
+    ],
+    "pages": [
+      "Page2",
+      "Test1"
+    ]
+  }]
+}, {
+  "title": "Page2",
+  "root": false,
+  "regions": [{
+    "variables": [
+      "Variable1",
+      "Variable2",
+      "Variable3",
+      "Led1",
+      "Led2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  }]
+}, {
+  "title": "Test1",
+  "regions": [{
+    "variables": [
+      "Led1"
+    ]
+  }]
+}]

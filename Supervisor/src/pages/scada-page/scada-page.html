@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{selectedItem.title}}</ion-title>
+    <ion-buttons end>
+      <connection-status></connection-status>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <region [ngModel]="region" *ngFor="let region of selectedItem.regions" (variableUpdate)="variableChange($event)" (pageChange)="navigate($event)"> </region>
+  <!-- <region [ngModel]="selectedItem"> </region> -->
+
+</ion-content>

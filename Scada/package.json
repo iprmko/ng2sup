@@ -1,0 +1,35 @@
+{
+  "name": "Scada",
+  "version": "1.0.0",
+  "description": "A websocket scada simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run debug:live",
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+    "debug:live": "nodemon  --inspect --debug-brk --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "0.0.34",
+    "@types/debug": "0.0.29",
+    "@types/express": "^4.0.35",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^7.0.5",
+    "nodemon": "^1.11.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "@types/socket.io": "^1.4.28",
+    "body-parser": "^1.17.0",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "debug": "^2.6.1",
+    "express": "^4.15.0",
+    "morgan": "^1.8.1",
+    "socket.io": "^1.7.3"
+  }
+}

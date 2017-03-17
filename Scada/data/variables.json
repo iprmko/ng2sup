@@ -1,0 +1,80 @@
+[{
+    "name": "Variable1",
+    "type": "number",
+    "value": 2,
+    "unit": "m"
+  },
+  {
+    "name": "Variable2",
+    "type": "number",
+    "value": 99,
+    "unit": "kg"
+  },
+  {
+    "name": "Variable3",
+    "type": "number",
+    "value": 99
+  },
+  {
+    "name": "Lunghezza",
+    "type": "number",
+    "value": 2,
+    "unit": "m",
+    "readonly": false
+  },
+  {
+    "name": "Peso",
+    "type": "number",
+    "value": 99,
+    "unit": "kg",
+    "readonly": true
+  },
+  {
+    "name": "Nome",
+    "type": "string",
+    "value": "mirko",
+    "readonly": true
+  },
+  {
+    "name": "Display",
+    "type": "string",
+    "value": "ciao"
+  },
+  {
+    "name": "Led1",
+    "type": "binary",
+    "value": true,
+    "readonly": true
+  },
+  {
+    "name": "Led2",
+    "type": "binary",
+    "value": true,
+    "readonly": true
+  },
+  {
+    "name": "Acceso",
+    "type": "binary",
+    "value": false,
+    "readonly": false
+  },
+  {
+    "name": "Mesi",
+    "type": "enum",
+    "value": "gennaio",
+    "enumeration": [
+      "gennaio",
+      "febbraio",
+      "marzo",
+      "aprile",
+      "maggio",
+      "giugno",
+      "luglio",
+      "agosto",
+      "settembre",
+      "ottobre",
+      "novembre",
+      "dicembre"
+    ]
+  }
+]

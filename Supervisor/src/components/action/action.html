@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-card-header *ngIf="item && item.header">
+    {{item.header}}
+  </ion-card-header>
+
+  <ion-list>
+    <tag [ngModel]="variable" *ngFor="let variable of variables" (valueUpdate)="variableChange(variable)"></tag>
+  </ion-list>
+
+  <button ion-button block (click)="performAction(item.name)" *ngIf="item">
+        {{item.name}}
+  </button>
+
+  <ion-footer>
+    <p *ngIf="errorMessage" class="danger">{{errorMessage}}</p>
+  </ion-footer>
+</ion-card>
