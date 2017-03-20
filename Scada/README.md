@@ -27,12 +27,13 @@ Usage
 * Supervisor contents can be changed by editing the content of `pages.json` and `variables.json` file in the data folder, then refresh the supervisor page if needed.
 * Ambient variables can be used for options tuning:
 
-| Ambient Variable | description  |
-| ------------- |:-------------:| -----:|
-| PORT | server port |
-| DEBUG | debug filter (See: Node debug) |
-| TICK_TIME | variable change rate |
- 
+| Ambient Variable | description                    |
+| -----------------|--------------------------------|
+| PORT             | server port                    |
+| DEBUG            | debug filter (See: Node debug) |
+| TICK_TIME        | variable change rate           |
+
+
 Debug
 -----
 Run the application with:
