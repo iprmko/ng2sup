@@ -17,9 +17,10 @@ Getting Started
 1. Clone this repository: `git clone https://github.com/iprmko/ng2sup/scada/scada.git`.
 2. Change dir to the project root folder `cd Scada`
 3. Run `npm install` from the project root.
-4. Run `PORT=9000 npm start` in a terminal from the project root.
+4. Run `PORT=9000 npm start` in a terminal from the project root. **Note:** Under windows use `PORT=9000 npm run build:live_windows`
 
 **Note:** Is your build slow? Update `npm` to 3.x: `npm install -g npm`.
+
 
 Usage
 -----
@@ -31,7 +32,7 @@ Usage
 | PORT | server port |
 | DEBUG | debug filter (See: Node debug) |
 | TICK_TIME | variable change rate |
-
+ 
 Debug
 -----
 Run the application with:

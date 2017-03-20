@@ -7,7 +7,8 @@
     "test": "npm run debug:live",
     "start": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
-    "debug:live": "nodemon  --inspect --debug-brk --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+    "debug:live": "nodemon  --inspect --debug-brk --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+	"build:live_windows": "nodemon --exec .\\node_modules\\.bin\\ts-node -- .\\src\\index.ts"
   },
   "keywords": [],
   "author": "",
