@@ -1,2 +1,6 @@
 # ng2sup
-Angular 2 supervisor demo
+
+ * [Demo supervisor](./Supervisor/README.md)
+ * [Simulator for supervisor Demo](./Scada/README.md)
+
+![Image of Yaktocat](./Immagine1.png)
